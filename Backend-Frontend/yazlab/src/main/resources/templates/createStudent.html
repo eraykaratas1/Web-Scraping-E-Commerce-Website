@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Product System</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Product System</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/products}">Product Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/products}">Admin Management</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "container">
+  <div class = "row">
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+      <h1 class = "text-center"> Create New Product </h1>
+      <div class = "card-body">
+
+        <form th:action="@{/products}" th:object = "${product}" method="POST" >
+          <div class ="form-group">
+            <label> Product Marka </label>
+            <input
+                    type = "text"
+                    name = "marka"
+                    th:field = "*{marka}"
+                    class = "form-control"
+                    placeholder="Enter Product Marka"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Product Model Name </label>
+            <input
+                    type = "text"
+                    name = "modelName"
+                    th:field = "*{modelName}"
+                    class = "form-control"
+                    placeholder="Enter Product Model Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Product No </label>
+            <input
+                    type = "text"
+                    name = "modelNo"
+                    th:field = "*{modelNo}"
+                    class = "form-control"
+                    placeholder="Enter Product Model No"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product OS </label>
+            <input
+                    type = "text"
+                    name = "OS"
+                    th:field = "*{OS}"
+                    class = "form-control"
+                    placeholder="Enter Product OS"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Processor Type </label>
+            <input
+                    type = "text"
+                    name = "processorType"
+                    th:field = "*{processorType}"
+                    class = "form-control"
+                    placeholder="Enter Product Processor Type"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Processor Generation </label>
+            <input
+                    type = "text"
+                    name = "processorGeneration"
+                    th:field = "*{processorGeneration}"
+                    class = "form-control"
+                    placeholder="Enter Product Processor Generation"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Ram </label>
+            <input
+                    type = "text"
+                    name = "ram"
+                    th:field = "*{ram}"
+                    class = "form-control"
+                    placeholder="Enter Product Ram"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Ssd Disc Size </label>
+            <input
+                    type = "text"
+                    name = "ssdDiscSize"
+                    th:field = "*{ssdDiscSize}"
+                    class = "form-control"
+                    placeholder="Enter Product Ssd Disc Size"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Hard Disc Size </label>
+            <input
+                    type = "text"
+                    name = "hardDiscSize"
+                    th:field = "*{hardDiscSize}"
+                    class = "form-control"
+                    placeholder="Enter Product Hard Disc Size"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Disc Type </label>
+            <input
+                    type = "text"
+                    name = "discType"
+                    th:field = "*{discType}"
+                    class = "form-control"
+                    placeholder="Enter Product Disc Type"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Screen Size </label>
+            <input
+                    type = "text"
+                    name = "screenSize"
+                    th:field = "*{screenSize}"
+                    class = "form-control"
+                    placeholder="Enter Product Screen Size"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Skor </label>
+            <input
+                    type = "text"
+                    name = "skor"
+                    th:field = "*{skor}"
+                    class = "form-control"
+                    placeholder="Enter Product Skor"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Price </label>
+            <input
+                    type = "text"
+                    name = "price"
+                    th:field = "*{price}"
+                    class = "form-control"
+                    placeholder="Enter Product Price"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Site Name </label>
+            <input
+                    type = "text"
+                    name = "siteName"
+                    th:field = "*{siteName}"
+                    class = "form-control"
+                    placeholder="Enter Product Site Name"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Image Url </label>
+            <input
+                    type = "text"
+                    name = "imageUrl"
+                    th:field = "*{imageUrl}"
+                    class = "form-control"
+                    placeholder="Enter Product Image Url"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Product Title </label>
+            <input
+                    type = "text"
+                    name = "title"
+                    th:field = "*{title}"
+                    class = "form-control"
+                    placeholder="Enter Product Title"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Product Product Url </label>
+            <input
+                    type = "text"
+                    name = "productUrl"
+                    th:field = "*{productUrl}"
+                    class = "form-control"
+                    placeholder="Enter Product Url"
+            />
+          </div>
+
+          <div class = "box-footer">
+            <button type="submit" class = "btn btn-primary" onclick="alert('Ürün Eklendi')" >
+              Submit
+            </button>
+
+
+          </div>
+        </form>
+
+      </div>
+
+
+</div>
+  </div>
+</div>
+</body>
+</html>

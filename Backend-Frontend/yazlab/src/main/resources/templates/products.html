@@ -1,0 +1,296 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>meherBilisim</title>
+    <style>
+        body {
+
+            background-color: white
+        }
+    </style>
+</head>
+
+
+<body>
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand"><img th:src="@{/img/Logo.png}"style="width:170px;" alt=""></a>
+
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+            <li class="nav-item">
+
+                <span class="spinner-grow sr-only navbar-link bg-info m-4" style="width:3rem;height:3rem"></span>
+
+            </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+
+                <a th:href="@{/products/all}" class="navbar-link">
+                    <h4>Anasayfa</h4>
+                </a>
+            </li>
+
+        </ul>
+
+        </ul>
+
+
+        </ul>
+    </div>
+
+</nav>
+
+<div class="text-info p-1 mx-auto dropdown d-flex justify-content-end" style="text-align:center">
+
+    <h2 class=" bg-dark text-white col-6 mx-auto" style="text-align:center">Ucuza Bilgisayar Almak Ýçin Adres: <span
+            class="badge rounded-pill bg-info">meherBiliþim!</span></h2>
+    <button class="btn btn-dark"type="button">
+        <a href="#" th:href="@{/products/login}" class="text-white">Admin Giriþi</a>
+
+    </button>
+
+</div>
+
+<br>
+
+
+
+
+<!-- <div class="badge bg-primary text-warning"style="width: 100px;">
+
+    meherBili?im
+</div> -->
+<form class="container w-60">
+    <div class="input-group mb-3">
+            <span class="input-group-text bg-danger text-white">
+                <a href="#" class="text-white">meherBiliþim</a>
+            </span>
+        <input type="text" list="computers" class="form-control"
+               placeholder="Ucuza almak istediðiniz ürünü giriniz!">
+        <button type="button" class="btn btn-outline-primary btn-lg">ARA</button>
+
+    </div>
+</form>
+<datalist id="computers">
+    <option value="Acer"></option>
+    <option value="Apple"></option>
+    <option value="Monster"></option>
+    <option value="MSI"></option>
+    <option value="Hometech"></option>
+    <option value="Fujitsu"></option>
+    <option value="Everest"></option>
+    <option value="Game Garaj"></option>
+    <option value="Monster Abra A5"></option>
+    <option value="Monster Abra A7"></option>
+    <option value="MSI Katana GF76"></option>
+    <option value="Apple Macbook Air M2"></option>
+    <option value="Acer Nitro 5"></option>
+    <option value="Hometech ALFA 470C"></option>
+    <option value="Fujitsu Lifebook A3510"></option>
+    <option value="Everest DMC SN10X"></option>
+    <option value="Game Garaj Slayer 7XL"></option>
+
+</datalist>
+
+<br>
+
+
+
+<form>
+    <div class="row g-0">
+        <div class="col">
+            <h5 class="bg-dark text-white" style="text-align: center;">En Çok Tercih Edilen Markalar</h5>
+        </div>
+
+        <div class="col">
+            <h5 class="bg-dark text-white" style="text-align: center;">En Çok Tercih Edilen Markalar</h5>
+        </div>
+
+    </div>
+</form>
+
+
+<div>
+    <ul class="list-group list-group-horizontal justify-content-center">
+
+        <a class="btn btn-primary ms-5" th:href="@{/products/all}" style="width:600px">Önerilen Sýralama</a>
+        <a class="btn btn-primary ms-5" th:href="@{/products/lineSkor}" style="width:600px">Artan Puan</a>
+        <a class="btn btn-primary ms-5" th:href="@{/products/inlineSkor}" style="width:600px">Azalan Puan</a>
+        <a class="btn btn-primary ms-5" th:href="@{/products/line}" style="width:600px">Artan Fiyat</a>
+        <a class="btn btn-primary ms-5" th:href="@{/products/inline}" style="width:600px">Azalan Fiyat</a>
+    </ul>
+</div>
+
+
+        <div class="row ms-5 ">
+            <div class="card-group justify-content-center">
+
+                <div class="col mt-3" th:each="book : ${products}">
+                    <div th:if="${book.siteName}==meherBilisim">
+                    <div class="card bg-white border-warning"style="width:350px;height:1000px">
+                        <img th:src="${book.imageUrl}" class="card-img-top" alt="">
+                        <div class="card-body">
+
+                            <h5 class="card-title ms-5 "th:text="${book.marka}"></h5>
+                            <a class="btn btn-link" href="#" th:href="@{/products/information/{_id}(_id=${book._id})}" role="button"th:text="${book.title}"></a>
+                            <img  src="/img/bosluk.png" width="100px" height="25px">
+                            <img th:if="${book.skor}==5" src="/img/5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.9" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.8" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.7" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.6" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.5" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.4" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.3" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.2" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.1" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4" src="/img/4.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.9" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.8" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.7" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.6" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.5" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.4" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.3" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.2" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.1" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3" src="/img/3.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.9" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.8" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.7" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.6" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.5" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.4" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.3" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.2" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.1" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2" src="/img/2.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.9" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.8" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.7" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.6" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.5" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.4" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.3" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.2" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.1" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1" src="/img/1.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.9" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.8" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.7" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.6" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.5" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.4" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.3" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.2" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.1" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0" src="/img/0.png" width="100px" height="25px"th:text="${book.skor}">
+
+
+                            <img  src="/img/bosluk.png" width="100px" height="25px">
+                                    <img th:if="${book.siteName}==meherBilisim" src="/img/meherBilisim.png" width="100px" height="25px">
+                                    <a class="btn btn-light" href="#" th:href="${book.productUrl}" role="button" th:text="${book.price}"></a>
+
+
+
+
+                            </tr>
+
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

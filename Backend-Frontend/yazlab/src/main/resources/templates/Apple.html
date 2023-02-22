@@ -1,0 +1,443 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>meherBilisim</title>
+    <style>
+        body {
+
+            background-color: white
+        }
+    </style>
+</head>
+
+
+<body>
+
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+    <div class="container">
+        <a href="#" class="navbar-brand"><img  th:src="@{/img/AkarBilisim.png}" style="width:170px; height:250px;" alt=""></a>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <form class="container">
+                    <div class="input-group mt-5">
+                            <span class="input-group-text bg-primary text-white">
+                               AKAR
+                            </span>
+                        <input type="text" list="computers" class="form-control"
+                               placeholder="Çok ucuza almak istediğiniz bilgisayarı giriniz!" style="width:700px">
+                        <button type="button" class="btn btn-outline-primary btn-lg">ARA</button>
+
+                    </div>
+                </form>
+                <datalist id="computers">
+                    <option value="Acer"></option>
+                    <option value="Apple"></option>
+                    <option value="Monster"></option>
+                    <option value="MSI"></option>
+                    <option value="Hometech"></option>
+                    <option value="Fujitsu"></option>
+                    <option value="Everest"></option>
+                    <option value="Game Garaj"></option>
+                    <option value="Monster Abra A5"></option>
+                    <option value="Monster Abra A7"></option>
+                    <option value="MSI Katana GF76"></option>
+                    <option value="Apple Macbook Air M2"></option>
+                    <option value="Acer Nitro 5"></option>
+                    <option value="Hometech ALFA 470C"></option>
+                    <option value="Fujitsu Lifebook A3510"></option>
+                    <option value="Everest DMC SN10X"></option>
+                    <option value="Game Garaj Slayer 7XL"></option>
+
+                </datalist>
+
+                <br>
+
+
+            </li>
+
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+
+                <a th:href="@{/akar/all}" class="navbar-link">
+                    <h4>Anasayfa</h4>
+                </a>
+            </li>
+
+        </ul>
+
+
+        </ul>
+    </div>
+
+</nav>
+
+<br><br>
+
+<div class="p-1 mx-auto dropdown d-flex justify-content-end" style="text-align:center">
+
+    <h2 class=" bg-secondary text-white col-5 mx-auto" style="text-align:center">Bilgisayar İçin Tek Yer: <span
+            class="badge rounded-pill bg-dark">AkarBilişim!</span></h2>
+
+</div>
+
+
+<div class="m-3">
+    <ul class="list-group list-group-horizontal me-5">
+
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/monster}">
+            <h5>Monster</h5>
+        </a>
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/apple}">
+            <h5>Apple</h5>
+        </a>
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/msi}">
+            <h5>MSI</h5>
+        </a>
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/dell}">
+            <h5>Dell</h5>
+        </a>
+
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/lenovo}">
+            <h5>Lenovo</h5>
+        </a>
+
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/hp}">
+            <h5>HP</h5>
+        </a>
+
+        <a class="list-group-item text-center bg-danger text-white border m-5 col-1" th:href="@{/products/acer}">
+            <h5>Acer</h5>
+        </a>
+
+    </ul>
+</div>
+
+
+</div>
+<div>
+    <ul class="list-group list-group-horizontal justify-content-center">
+
+        <a class="btn btn-primary ms-5" th:href="@{/akar/all}" style="width:600px">Önerilen Sıralama</a>
+        <a class="btn btn-primary ms-5" th:href="@{/akar/lineSkor}" style="width:600px">Artan Puan</a>
+        <a class="btn btn-primary ms-5" th:href="@{/akar/inlineSkor}" style="width:600px">Azalan Puan</a>
+        <a class="btn btn-primary ms-5" th:href="@{/akar/line}" style="width:600px">Artan Fiyat</a>
+        <a class="btn btn-primary ms-5" th:href="@{/akar/inline}" style="width:600px">Azalan Fiyat</a>
+
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-2">
+
+
+        <h6 class="text-black-800 m-4 p-1">MARKALAR</h6>
+
+
+        <div class="m-4 col-10" style="overflow:scroll">
+            <ul class="list-group w-40">
+                <a th:href="@{/products/acer}" class="list-group-item list-group-item-action list-group-item-warning">Acer</a>
+
+
+                <a th:href="@{/products/apple}" class="list-group-item list-group-item-action list-group-item-warning">Apple
+                    </a>
+
+                    <a th:href="@{/products/asus}" class="list-group-item list-group-item-action list-group-item-warning">Asus
+                        </a>
+
+                        <a th:href="@{/products/dell}" class="list-group-item list-group-item-action list-group-item-warning">Dell
+                            </a>
+
+                            <a th:href="@{/products/hp}"
+                               class="list-group-item list-group-item-action list-group-item-warning">HP
+                            </a>
+
+                            <a th:href="@{/products/hometech}"
+                               class="list-group-item list-group-item-action list-group-item-warning">Hometech
+                            </a>
+
+                            <a th:href="@{/products/lenovo}"
+                               class="list-group-item list-group-item-action list-group-item-warning">Lenovo
+                            </a>
+
+                            <a th:href="@{/products/monster}"
+                               class="list-group-item list-group-item-action list-group-item-warning">Monster
+                            </a>
+                            <a th:href="@{/products/msi}" class="list-group-item list-group-item-action list-group-item-warning">MSI
+                            </a>
+
+
+                        </a>
+            </ul>
+        </div>
+
+
+
+        <div class="m-4 col-10 text-white"style="overflow:scroll">
+            <h6 class="text-dark m-1 p-1 text-center">RAM(BELLEK)</h6>
+
+            <form th:action="@{/products/ram}">
+                <div class="text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        4 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ramb}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        8 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/rambb}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        16 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/rambbb}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        32 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/rambbbb}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        64 GB
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="m-4 col-10 text-white" style="overflow:scroll">
+            <h6 class="text-dark m-1 p-1 text-center">SSD-BOYUT</h6>
+
+            <form th:action="@{/products/ssd}">
+                <div class="text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        64 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssdd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        128 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssddd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        256 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssdddd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        500 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssddddd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        512 GB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssdddddd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        1 TB
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/ssddddddd}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        2 TB
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <div class="m-4 col-10 text-white" style="overflow:scroll">
+            <h6 class="text-dark ms-2 p-1 text-center">SITELER</h6>
+
+            <form th:action="@{/products/hepsiburada}">
+                <div class="text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        Hepsiburada
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/trendyol}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        Trendyol
+                    </button>
+                </div>
+            </form>
+
+            <form th:action="@{/products/n11}">
+                <div class = "text-center">
+                    <button type="submit" class = "btn btn-danger" >
+                        N11
+                    </button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="row ms-5">
+            <div class="card-group">
+
+                <div class="col mt-3" th:if="${book.marka}==apple" th:each="book : ${products}">
+
+                    <div class="card bg-white border-warning"style="width:350px;height:1000px">
+                        <img th:src="${book.imageUrl}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title ms-5 "th:text="${book.marka}"></h5>
+                            <a class="btn btn-link" href="#" th:href="@{/products/information/{_id}(_id=${book._id})}" role="button"th:text="${book.title}"></a>
+
+                            <img th:if="${book.skor}==5" src="/img/5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.9" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.8" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.7" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.6" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.5" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.4" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.3" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.2" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4.1" src="/img/4,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==4" src="/img/4.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.9" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.8" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.7" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.6" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.5" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.4" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.3" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.2" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3.1" src="/img/3,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==3" src="/img/3.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.9" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.8" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.7" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.6" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.5" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.4" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.3" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.2" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2.1" src="/img/2,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==2" src="/img/2.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.9" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.8" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.7" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.6" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.5" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.4" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.3" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.2" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1.1" src="/img/1,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==1" src="/img/1.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.9" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.8" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.7" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.6" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.5" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.4" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.3" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.2" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0.1" src="/img/0,5.png" width="100px" height="25px"th:text="${book.skor}">
+                            <img th:if="${book.skor}==0" src="/img/0.png" width="100px" height="25px"th:text="${book.skor}">
+
+
+                            <div class="col mt-3" th:each="pro : ${products}" th:if="${pro.modelNo}==${book.modelNo}">
+                                <img th:if="${pro.siteName}==Hepsiburada" src="/img/Hepsiburada.png" width="100px" height="25px">
+                                <img th:if="${pro.siteName}==Trendyol" src="/img/Trendyol.png" width="100px" height="25px">
+                                <img th:if="${pro.siteName}==n11" src="/img/n11.png" width="100px" height="25px">
+                                <a class="btn btn-light" href="#" th:href="${pro.productUrl}" role="button" th:text="${pro.price}">
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
